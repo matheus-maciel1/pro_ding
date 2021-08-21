@@ -1,0 +1,25 @@
+<script type="text/javascript" src="../js/funcoes.js">var x = document.getElementById('usuario'); logx = localStorage.getItem("ProDing_log");</script>
+<script type="text/javascript" src="../js/controllers.js"></script>
+<body ng-app="app">
+    <ion-view title="Login" hide-nav-bar="true" hide-back-button="true" id="page5" name="log" style="background-color:rgb(0,112,253);">
+        <ion-content padding="true" class="manual-ios-statusbar-padding" ng-controller="MainCtrl">
+            <div>
+                <img src="img/eei0d8kuQ46nWprwGdho_proding.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="spacer" style="width: 300px; height: 24px;"></div>
+            <form id="login-form1" class="list">
+                <ion-list id="login-list2">
+                    <label class="item item-input" id="login-input1">
+                        <input type="text" placeholder="Usuário" id="usuario">
+                    </label>
+                </ion-list>
+                <div class="spacer" style="width: 300px; height: 12px;"></div>
+                <label class="item item-input" id="login-input2">
+                    <input type="password" placeholder="Senha" id="senha">
+                </label>
+                <a onclick="ValidaLogin(document.getElementById('usuario').value, document.getElementById('senha').value);" id="login-button1" class="button button-assertive button-block">Entrar</a>
+                <a ui-sref="cadastreSe()" id="login-button2" class="button button-light button-block button-clear">Não tem uma conta? Cadastre-se</a>
+            </form>
+        </ion-content>
+    </ion-view>
+</body>

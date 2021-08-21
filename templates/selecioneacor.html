@@ -1,0 +1,57 @@
+<html ng-app="MyApp">
+
+<head>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.js"></script>
+    <script src="../js/funcoes.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('MyApp', []);
+        app.directive('colorpicker', function ($parse) {
+            // sample color picker directive
+            // todo : bound to a ng-model
+            return {
+                restrict: 'E',
+                scope: {
+                    colorClick: '&'
+                },
+                template: '<input ng-model="r" type="range" min="0" max="200"><br>' +
+                    '<input ng-model="g" type="range" min="0" max="200"><br>' +
+                    '<input ng-model="b" type="range" min="0" max="200"><br>' +
+                    '<div ng-click="colorClick({r: r, g: g, b: b})" style="cursor:pointer;background-color:rgb({{ r }}, {{ g }}, {{ b }});width:200px;height:40px;"></div>',
+                link: function (scope, iElement, iAttrs) {
+                    scope.r = 0;
+                    scope.g = 57;
+                    scope.b = 160;
+                }
+            };
+        });
+        
+         function guardacor(){
+            localStorage.setItem("ProDing_Cor", color);
+            console.log(localStorage.getItem("ProDing_Cor"));
+            document.body.style.backgroundColor = localStorage.getItem('ProDing_Cor');
+            window.top.location.reload();
+           // window.top.location="../index.html";
+         
+        }   
+
+        function MyCtrl($scope) {
+            $scope.colorSelected = function (r, g, b) {
+                color = 'rgb(' + r + ',' + g + ',' + b + ')';
+               // localStorage.setItem("ProDing_Cor", color);
+               // guardacor();
+            };
+        }
+        
+            
+    </script>
+</head>
+
+<body>
+
+    <div align="center" ng-controller="MyCtrl">
+        <colorpicker color-click="colorSelected(r, g, b)" onclick="guardacor(); TakeColor();" ></colorpicker>
+    </div>
+
+</body>
+
+</html>

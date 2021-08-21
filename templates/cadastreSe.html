@@ -1,0 +1,43 @@
+<ion-view title="Cadastre-se" id="page9" style="background-color:rgb(0,112,253);">
+<script src="js/funcoes.js"></script>
+    <ion-nav-bar class="bar-light">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true" class="has-header">
+        <div>
+            <img src="img/E6SSqhHkQZKs9I5im0Mm_cadastro.png" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <form method="get" id="cadastreSe-form2" class="list">
+            <label class="item item-input" id="cadastreSe-input3" name="nome_completo">
+                <input type="text" placeholder="Nome completo" id="nome_comp">
+            </label>
+            <div class="spacer" style="width: 300px; height: 10px;"></div>
+            <ion-list id="cadastreSe-list3">
+                <label class="item item-input" id="cadastreSe-input7" name="usuario">
+                    <input type="text" placeholder="Usuário" id="usuario1">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 10px;"></div>
+            <label class="item item-input" id="cadastreSe-input4" name="email">
+                <input type="text" placeholder="Email@email.com" id="email">
+            </label>
+            <div class="spacer" style="width: 300px; height: 10px;"></div>
+            <label class="item item-input" id="cadastreSe-input5" name="senha">
+                <input type="text" placeholder="Senha" id="senha1">
+            </label>
+            <div class="spacer" style="width: 300px; height: 10px;"></div>
+            <label class="item item-input" id="cadastreSe-input6" name="dt_nasc">
+                <input type="date" placeholder="Data de Nascimento" id="dt_nasc">
+            </label>
+            <div class="spacer" style="width: 300px; height: 12px;"></div>
+            <label class="item item-select" id="cadastreSe-select2">
+                <span class="input-label">Gênero</span>
+                <select id="genero">
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </label>
+        </form>
+        <a ui-sref="login()" id="cadastreSe-button11" style="color:#FFFFFF;" class="button button-balanced button-block" onclick="RegUsers();">Cadastrar</a>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<script src="js/funcoes.js"></script>
+<!-- inside <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.0/tiny-slider.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.0/min/tiny-slider.js"></script>
+<div class="my-slider" id="my-slider">
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Romance" target="_parent"><img style="width:100%" src="img/romance.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Terror" target="_parent"><img style="width:100%" src="img/terror.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Infantil" target="_parent"><img style="width:100%" src="img/infantil.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Aventura" target="_parent"><img style="width:100%" src="img/aventura.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Contos" target="_parent"><img style="width:100%" src="img/contosecronicas.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Epicos" target="_parent"><img style="width:100%" src="img/epicosefantasia.png"></a>
+    </div>
+    <div>
+        <a href="index.html#/side-menu21/page15?categoria=Ficcao" target="_parent"><img style="width:100%" src="img/ficcao.png"></a>
+    </div>
+</div>
+<script>
+    var slider = tns({
+        container: '.my-slider',
+        items: 3,
+        slideBy: 'page',
+        "mouseDrag": true,
+        "speed": 400,
+        controls: false,
+        nav: false,
+        gutter: 5
+    });
+</script>
